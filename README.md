@@ -77,6 +77,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Team members
 Name : Rafat Hussain
+
 Email: rafat.hsn@gmail.com
+
 Discord: rhsn
+
 Telegram: rhsn999
