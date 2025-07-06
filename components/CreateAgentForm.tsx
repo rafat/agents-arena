@@ -31,10 +31,36 @@ interface DNA {
 export function CreateAgentForm({ onSuccess }: CreateAgentFormProps) {
   const { address } = useAccount();
   const { mintAgent,getAgent, isPending } = useAgentFactory();
-  
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [nickname, setNickname] = useState('');
   const [createdAgentId, setCreatedAgentId] = useState<bigint | null>(null);
   const lastMetadataCidRef = useRef<string | null>(null);
+  const predefinedImages: { url: string; label: string }[] = [
+    {
+      label: 'Cyber Warrior',
+      url: 'https://gateway.pinata.cloud/ipfs/QmPpdTLmRoTcWFhgzUEp1fSqFmKQS5bQWAA8dvozVRrWjV',
+    },
+    {
+      label: 'Neon Assassin',
+      url: 'https://gateway.pinata.cloud/ipfs/QmQwmGWULWjazkk1NyRmPVqmGJh2ZhDecxVQRoJvEafXe1',
+    },
+    {
+      label: 'Tech Monk',
+      url: 'https://gateway.pinata.cloud/ipfs/QmPW1Yj31KCDcbdbJkszqWHdNcQT8pX1jZUATidTyy6D7b',
+    },
+    {
+      label: 'Plasma Valkyrie',
+      url: 'https://gateway.pinata.cloud/ipfs/QmNqDSVvA974dmBZNehuyUogLqcsBVcWxy9dR5wJGEC3EF',
+    },
+    {
+      label: 'Blade Sentinel',
+      url: 'https://gateway.pinata.cloud/ipfs/Qmc4bYb3cR9dsM7fZY5mNwfrdzCpxcJFUvtSam2N4LzN94',
+    },
+    {
+      label: 'Radiant Hunter',
+      url: 'https://gateway.pinata.cloud/ipfs/QmcVCmnk6BaUBdLXYg4fngY63kWk3TrV9fieqQJ9EBTMoH',
+    },
+  ];
   const [steps, setSteps] = useState<CreationStep[]>([
     {
       step: 1,
@@ -169,6 +195,7 @@ export function CreateAgentForm({ onSuccess }: CreateAgentFormProps) {
   };
 
   // Generate AI image using API route
+  /*
   const generateAgentImage = async (customPrompt?: string): Promise<string> => {
     try {
       const prompt = customPrompt || `A fierce warrior battle agent named ${nickname.trim()}, cyberpunk style, futuristic armor, glowing eyes, standing in a battle stance, digital art, high quality, dramatic lighting, dark background with neon accents`;
@@ -198,7 +225,13 @@ export function CreateAgentForm({ onSuccess }: CreateAgentFormProps) {
       throw error;
     }
   };
-
+*/
+  const generateAgentImage = async (): Promise<string> => {
+      if (!selectedImage) {
+      throw new Error('Please select an avatar image.');
+    }
+    return selectedImage;
+  };
   const handleCreateAgent = async () => {
     if (!address || !nickname.trim()) return;
 
@@ -258,7 +291,7 @@ export function CreateAgentForm({ onSuccess }: CreateAgentFormProps) {
   };
 
   const isCreating = steps.some(s => s.loading);
-  const canCreate = address && nickname.trim().length > 0 && !isCreating;
+  const canCreate = address && nickname.trim().length > 0 && selectedImage && !isCreating;
   const hasError = steps.some(s => s.error);
 
   return (
@@ -284,6 +317,33 @@ export function CreateAgentForm({ onSuccess }: CreateAgentFormProps) {
         <p className="text-white/60 text-sm mt-1">
           {nickname.length}/30 characters
         </p>
+      </div>
+
+      {/* Predefined Image Selector */}
+      <div className="mb-8">
+        <label className="block text-white/90 text-sm font-medium mb-2">
+          Choose an Avatar Image
+        </label>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {predefinedImages.map((img, index) => (
+            <div
+              key={index}
+              onClick={() => setSelectedImage(img.url)}
+              className={`cursor-pointer border-2 rounded-lg overflow-hidden ${
+                selectedImage === img.url
+                  ? 'border-blue-500'
+                  : 'border-white/20 hover:border-white/40'
+              }`}
+            >
+              <img
+                src={img.url}
+                alt={img.label}
+                className="w-full h-32 object-cover"
+              />
+              <p className="text-center text-white text-xs py-1 bg-black/40">{img.label}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Creation Steps */}
