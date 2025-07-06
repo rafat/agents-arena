@@ -74,3 +74,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 3. Develop a more enhanced battle system. For example, an owner with multiple agents can participate in tag team matches with prizes at stake. fight9) logic can also become more complex and last for more rounds.
 4. Right now the battle takes place only on the blockchain. My plan is to , yes, fight the battle on the blockchain and then use the data to animate the fight on the front end. This was beyond my capabilities to implement it on a one week schedule but this is something I'm going to implement.
 5. Marketplaces : To buy and sell equipped items, agents and anything you can think of. Additionally, when robust contracts are deployed it is also possible to build prediction and betting markets around it.
+
+### Team members
+Name : Rafat Hussain
+Email: rafat.hsn@gmail.com
+Discord: rhsn
+Telegram: rhsn999
