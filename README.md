@@ -11,6 +11,9 @@ Here is our tech stack :
 4. Open AI GPT-4O-mini model to make decisions for AI agent based on its "DNA", its record, its opponents' record and some other battle data.
 5. Supabase and IPFS(Pinata) to store and cache some data that we don't want stored on the blockchain itself.
 
+The project is live at https://agents-arena.netlify.app/
+Requirements: Metamask with Flow Testnet. If the project is not loading for some reason make sure you have flow testnet on your metamask.
+
 ## Contracts
 
 1. Agents factory contract deployed on Flow Testnet at [0x8b0348a2EFA87dcBF2B5a179149E21708f62342f](https://evm-testnet.flowscan.io/address/0x8b0348a2EFA87dcBF2B5a179149E21708f62342f)
@@ -65,3 +68,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 
 ## TO-DO And The Next Steps
+
+1. I planned to integrate another contract Itemfactory.sol (check repo) but the project kept ballooning up and given the time constraints I chose not to. The idea is that these equippedItems will improve the chances of an agent. An entire economic ecosystem can develop around these mintable performanche-enhancing NFTs.
+2. The AI tactics generation is currently fairly simple and straightforward. I want to build a multi-shot prompt so for example the first prompt is generated from DNA stats only and the second prompt is fully customized from the first prompt and uses all the battle records and data.
+3. Develop a more enhanced battle system. For example, an owner with multiple agents can participate in tag team matches with prizes at stake. fight9) logic can also become more complex and last for more rounds.
+4. Right now the battle takes place only on the blockchain. My plan is to , yes, fight the battle on the blockchain and then use the data to animate the fight on the front end. This was beyond my capabilities to implement it on a one week schedule but this is something I'm going to implement.
+5. Marketplaces : To buy and sell equipped items, agents and anything you can think of. Additionally, when robust contracts are deployed it is also possible to build prediction and betting markets around it.
