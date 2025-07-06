@@ -12,7 +12,7 @@ export default function HomePage() {
           Welcome to Agents Arena
         </h1>
         <p className="text-white/80 text-lg mb-8">
-          Create, battle, and collect powerful agents
+          Create and battle powerful agents
         </p>
 
         <div className="mb-12 flex justify-center">

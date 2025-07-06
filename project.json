@@ -1,0 +1,14 @@
+{
+  "name": "Agents Arena",
+  "tagline": "Welcome to the Agents Arena. Create and battle powerful AI agents.",
+  "description": "What it does, how it works, and the tech used.",
+  "team": [
+    {
+      "name": "Rafat Hussain",
+      "email": "rafat.hsn@gmail.com"
+    }
+  ],
+  "demo_url": "https://agents-arena.netlify.app/",
+  "video_url": "https://youtube.com/watch?v=your-demo-video",
+  "technologies": ["Next.js", "Solidity", "Supabase", "OpenAI", "Flow VRF"]
+}
