@@ -5,7 +5,7 @@
 The concept is old as time but the recent unitree robot boxing matches make it clear that with the advancements in AI and Robotics mainly because of reinforcement learning we are only a few short years away from fully autonomous robots duking it out in an arena. If their fighting robots that are good enough to put up an entertaining fight then the audience and money will follow. I believe blockchain/ledger technology will be an integral part of this equation to make sure that there is trust and verfifiability in this process. For this project we are not putting unitree robots to fight. Our "robots" are AI agents powered by OpenAI and the fight outcomes are powered by [Flow Network's Cadence Arch](https://github.com/onflow/flips/blob/main/protocol/20231116-evm-support.md#cadence-arch)
 
 Here is our tech stack : 
-1. Contracts (AgentFactory.sol and Arena.sol) deployed on Flow Testnet
+1. Contracts (AgentFactory.sol and Arena.sol) deployed on Flow Testnet. In addition , VRF (Randomness) by Cadence Arch contract hosted on Flow EVM Testnet.
 2. Next.js 15+ Frontend
 3. Open AI Dall-E-3 model to generate Ai Agents Image.
 4. Open AI GPT-4O-mini model to make decisions for AI agent based on its "DNA", its record, its opponents' record and some other battle data.
