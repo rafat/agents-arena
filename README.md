@@ -1,4 +1,7 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Agents Arena
+<div align="center"><img src="https://github.com/rafat/agents-arena/blob/main/public/image.webp"  width="512" alt="WebP Image" /></div>
+
+The concept is old as time but the recent unitree robot boxing matches make it clear that with the advancements in AI and Robotics mainly because of reinforcement learning we are only a few short years away from fully autonomous robots duking it out in an arena. If their fighting robots that are good enough to put up an entertaining fight then the audience and money will follow. I believe blockchain/ledger technology will be an integral part of this equation to make sure that there is trust and verfifiability in this process. 
 
 ## Getting Started
 
