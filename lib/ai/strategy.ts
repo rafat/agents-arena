@@ -90,20 +90,23 @@ export class AIStrategyEngine {
     RECENT BATTLES: ${JSON.stringify(battleHistory.slice(-3), null, 2)}
     
     IMPORTANT: You must respond with ONLY a valid JSON object in this exact format:
+    Based on this analysis, return optimal tactics as a JSON object:
     {
-      "aggressiveness": 50,
-      "strategy": "Tactician",
-      "riskTolerance": 40,
+      "aggressiveness": 0-100,
+      "strategy": "Balanced|Berserker|Tactician|Defensive",
+      "riskTolerance": 0-100,
       "reasoning": "detailed explanation of tactical choices"
     }
     
     Valid strategy values are: "Balanced", "Berserker", "Tactician", "Defensive"
-    All numeric values must be between 0 and 100.
+    aggressiveness and riskTolerance values must be between 0 and 100.
     `;
 
     try {
       const response = await this.llm.invoke(prompt);
       const content = response.content as string;
+
+      console.log("LLM Response: ",content);
       
       // More robust JSON extraction
       let tactics;
