@@ -138,31 +138,6 @@ export default function ArenaPage() {
           </p>
         </div>
 
-        {/* AI Toggle */}
-        <div className="mb-6 bg-white/10 backdrop-blur-md rounded-lg p-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="text-white font-semibold">Battle Mode</h3>
-              <p className="text-white/70 text-sm">
-                {useAI ? 'AI agents will strategize automatically' : 'Manual tactics selection'}
-              </p>
-            </div>
-            <button
-              onClick={() => setUseAI(!useAI)}
-              disabled={battleState !== 'idle'}
-              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors disabled:opacity-50 ${
-                useAI ? 'bg-blue-600' : 'bg-gray-600'
-              }`}
-            >
-              <span
-                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                  useAI ? 'translate-x-6' : 'translate-x-1'
-                }`}
-              />
-            </button>
-          </div>
-        </div>
-
         {/* Battle Status */}
         <div className="mb-6 bg-white/10 backdrop-blur-md rounded-lg p-4">
           <div className="flex items-center justify-between">

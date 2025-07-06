@@ -7,9 +7,8 @@ The concept is old as time but the recent unitree robot boxing matches make it c
 Here is our tech stack : 
 1. Contracts (AgentFactory.sol and Arena.sol) deployed on Flow Testnet. In addition , VRF (Randomness) by Cadence Arch contract hosted on Flow EVM Testnet.
 2. Next.js 15+ Frontend
-3. Open AI Dall-E-3 model to generate Ai Agents Image.
-4. Open AI GPT-4O-mini model to make decisions for AI agent based on its "DNA", its record, its opponents' record and some other battle data.
-5. Supabase and IPFS(Pinata) to store and cache some data that we don't want stored on the blockchain itself.
+3. Open AI GPT-4O-mini model to make decisions for AI agent based on its "DNA", its record, its opponents' record and some other battle data.
+4. Supabase and IPFS(Pinata) to store and cache some data that we don't want stored on the blockchain itself.
 
 The project is live at https://agents-arena.netlify.app/
 Requirements: Metamask with Flow Testnet. If the project is not loading for some reason make sure you have flow testnet on your metamask.

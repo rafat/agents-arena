@@ -1,7 +1,7 @@
 {
   "name": "Agents Arena",
-  "tagline": "Welcome to the Agents Arena. Create and battle powerful AI agents.",
-  "description": "What it does, how it works, and the tech used.",
+  "tagline": "Welcome to the Agents Arena. Create and battle powerful AI Warriors.",
+  "description": "Agents Arena is an AI agent battle platform build on top of Next.js and Flow testnet. It uses a combination of OpenAI as the brain of the virtual fighters and Flow VRF(Randomness) to help generate fight outcomes..",
   "team": [
     {
       "name": "Rafat Hussain",
@@ -9,6 +9,6 @@
     }
   ],
   "demo_url": "https://agents-arena.netlify.app/",
-  "video_url": "https://youtube.com/watch?v=your-demo-video",
+  "video_url": "https://www.youtube.com/watch?v=QlGpPUxa5Zo",
   "technologies": ["Next.js", "Solidity", "Supabase", "OpenAI", "Flow VRF"]
 }
