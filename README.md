@@ -12,6 +12,24 @@ Here is our tech stack :
 5. Supabase and IPFS(Pinata) to store and cache some data that we don't want stored on teh blockchain itself.
 
 ## Contracts
+
+1. Agents factory contract deployed on Flow Testnet at [0x8b0348a2EFA87dcBF2B5a179149E21708f62342f](https://evm-testnet.flowscan.io/address/0x8b0348a2EFA87dcBF2B5a179149E21708f62342f)
+2. Arena contract deployed on Flow Testnet at [0x644050Bd1200cf3692682d90BF145E84080dc0B4](https://evm-testnet.flowscan.io/address/0x644050Bd1200cf3692682d90BF145E84080dc0B4)
+
+   Contracts repository is [here](https://github.com/encoderafat/agents-arena-contracts)
+
+Agents struct at minting
+```
+Agent({
+id: newId,
+level: 1,
+experience: 0,
+dna: newDna,
+metadataCID: _metadataCID,
+equippedItem: 0
+});
+```
+where initial four dimensional DNA {strength, agility, intelligence, elementalAffibity} is generated using CadenceArch's revertibleRandom(). We call it DNA but it is an evolving metrics and agents can level up by fighting and gaining experience.
  
 
 ## Getting Started
