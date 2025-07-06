@@ -17,6 +17,9 @@ export default function NavBar() {
         <Link href="/arena" className="text-white hover:text-indigo-400 transition">
           Arena
         </Link>
+        <Link href="/leaderboard" className="text-white hover:text-indigo-400 transition">
+          Leaderboard
+        </Link>
       </div>
       <ConnectWallet />
     </nav>

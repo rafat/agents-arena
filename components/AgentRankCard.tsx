@@ -109,33 +109,6 @@ export function AgentRankCard({ agentStats, rank }: AgentRankCardProps) {
           </div>
         </div>
       </div>
-
-      {/* Additional Stats Row */}
-      <div className="mt-4 pt-4 border-t border-gray-700/50">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
-          <div className="flex justify-between">
-            <span className="text-gray-400">Damage Dealt:</span>
-            <span className="text-white font-medium">{agentStats.total_damage_dealt.toLocaleString()}</span>
-          </div>
-          
-          <div className="flex justify-between">
-            <span className="text-gray-400">Damage Taken:</span>
-            <span className="text-white font-medium">{agentStats.total_damage_received.toLocaleString()}</span>
-          </div>
-          
-          <div className="flex justify-between">
-            <span className="text-gray-400">Experience:</span>
-            <span className="text-white font-medium">{agent.experience.toLocaleString()}</span>
-          </div>
-        </div>
-        
-        {agentStats.favorite_strategy && (
-          <div className="mt-2 flex justify-between">
-            <span className="text-gray-400">Favorite Strategy:</span>
-            <span className="text-white font-medium">{agentStats.favorite_strategy}</span>
-          </div>
-        )}
-      </div>
     </div>
   );
 }
